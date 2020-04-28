@@ -179,7 +179,7 @@ function openRoom(element){
   if (typeof roomSocket !== 'undefined') {
     roomSocket.close()
   }
-  roomSocket = new WebSocket('ws://zhm233.top:3701' + roomPath)
+  roomSocket = new WebSocket('ws://pantie.xicp.net:3701' + roomPath)
   setRoomListeners(roomSocket, roomName)
 /*
   if (window.location.protocol == "https:"){
@@ -248,7 +248,7 @@ const statusObject = document.getElementById("roomStatus")
 const roomsObject = document.getElementById("rooms")
 
 // Create WebSocket connection.
-let socket = new WebSocket('ws://zhm233.top:3701/')
+let socket = new WebSocket('ws://pantie.xicp.net:3701/')
 setListeners(socket)
   /*
 if (window.location.protocol == "https:"){
