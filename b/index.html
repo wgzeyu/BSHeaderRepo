@@ -1,54 +1,74 @@
 <!doctype html>
-<html lang="zh">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>document.getElementsByTagName("html")[0].className += " js";</script>
-    <title>Beat Saber游戏资源共享</title>
+<html lang="zh" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap' rel='stylesheet' type='text/css'-->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<title>BeatSaber游戏资源共享</title>
+
     <script>
       if (window.location !== window.parent.location) {
-        document.write('<link id="cd-base-part-1" rel="stylesheet" href="assets/header/css/base-part-1.css">');
+        document.write('<link id="cd-base-part-1" rel="stylesheet" href="../assets/header/css/base-part-1.css">');
       } else {
-        document.write('<link id="cd-base-part-1" rel="stylesheet" href="assets/header/css/style.css">');
+        document.write('<link id="cd-base-part-1" rel="stylesheet" href="../assets/header/css/style.css">');
       }
     </script>
     <noscript>
-      <link id="cd-base-part-1" rel="stylesheet" href="assets/header/css/base-part-1.css">
+      <link id="cd-base-part-1" rel="stylesheet" href="../assets/header/css/base-part-1.css">
     </noscript>
     <script>
       if ('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
-        document.write('<link rel="stylesheet" href="assets/header/css/flexi-header.css?v=8">');
+        document.write('<link rel="stylesheet" href="../assets/header/css/flexi-header.css?v=8">');
       } else {
-        document.write('<link rel="stylesheet" href="assets/header/css/flexi-header-ie.css">');
+        document.write('<link rel="stylesheet" href="../assets/header/css/flexi-header-ie.css">');
       }
     </script>
     <noscript>
-      <link rel="stylesheet" href="assets/header/css/flexi-header.css?v=8">
+      <link rel="stylesheet" href="../assets/header/css/flexi-header.css?v=8">
     </noscript>
     <script>
       if ('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
-        document.write('<link rel="stylesheet" href="assets/header/css/modal-window.css?v=8">');
+        document.write('<link rel="stylesheet" href="../assets/header/css/modal-window.css?v=8">');
       } else {
-        document.write('<link rel="stylesheet" href="assets/header/css/modal-window-ie.css">');
+        document.write('<link rel="stylesheet" href="../assets/header/css/modal-window-ie.css">');
       }
     </script>
     <noscript>
-      <link rel="stylesheet" href="assets/header/css/modal-window.css?v=8">
+      <link rel="stylesheet" href="../assets/header/css/modal-window.css?v=8">
     </noscript>
     <style>
-      body{
-        margin:0;
-        padding:0;
-        overflow-y:hidden
-      }
-    </style>
-  </head>
-  <body onload="ciframe();cimg('iframea','site.html?v=' + Math.random());">
-    <div id="nheader">
+		.hzw { /*导航栏占位*/
+			height:70px;
+		} 
+		.nav{ /*固定导航栏*/
+		    position:fixed;
+		    top:0;
+		    left:0;
+		    width:100%;
+		    height:70px;
+		    z-index:14;
+		}
+		@media screen and (max-width: 1023px) {
+			.nav{
+			    height:50px;
+			}
+			.hzw{
+				height:50px;
+			} 
+		}
+	</style>
+
+	<link rel="stylesheet" href="css/style.css"> <!-- Gem style -->
+</head>
+<body onload="ctest();">
+
+    <div style="background:#FFF" class="nav" id="c_nav">
       <header class="x-nsp js-f-header x-ve">
         <div class="x-nsd x-t x-a">
           <a href="#0" class="x-nsv">
-            <img width="100%" src="assets/header/img/wgzeyu.png">
+            <img width="100%" src="../assets/header/img/wgzeyu.png">
           </a>
           <button class="reset x-nss js-anim-menu-btn x-nsm js-tab-focus" aria-label="Toggle menu">
             <i class="x-nso x-nsu" aria-hidden="true"></i>
@@ -58,68 +78,55 @@
           <div class="x-noe x-tus x-t x-a">
             <div class="x-nsb flex-grow x-iv">
               <a href="#0" class="x-nsv">
-                <img width="100%" src="assets/header/img/wgzeyu.png">
+                <img width="100%" src="../assets/header/img/wgzeyu.png">
               </a>
             </div>
-            <ul class="x-not flex-grow x-iv x-tui">
-              <li class="x-nsw">
-                <a href="https://bs-wgzeyu.gtxcn.com/" class="x-nsk">BS教程与问题解答</a>
-              </li>
-              <li class="x-nsw">
-                <a href="http://bs.zhm233.top/?1" class="x-nsk">
-                  <span>游戏资源共享</span>
-                  <svg class="x-nsx icon" aria-hidden="true" viewBox="0 0 12 12">
-                    <path d="M6,9l4-5H2Z"></path>
-                  </svg>
-                </a>
-                <ul class="x-nsz">
-                  <li>
-                    <a href="http://bs.zhm233.top/?1" class="x-ns_">主站 | 可上传 | 张慧明</a>
-                  </li>
+	        <ul class="x-not flex-grow x-iv x-tui">
+	          <li class="x-nsw">
+	            <a href="https://bs-wgzeyu.gtxcn.com/" class="x-nsk">BS教程与问题解答</a>
+	          </li>
+	          <li class="x-nsw">
+	            <a href="http://bs.zhm233.top/?1" class="x-nsk">
+	              <span>游戏资源共享</span>
+	              <svg class="x-nsx icon" aria-hidden="true" viewBox="0 0 12 12">
+	                <path d="M6,9l4-5H2Z"></path>
+	              </svg>
+	            </a>
+	            <ul class="x-nsz">
+	              <li>
+	                <a href="http://bs.zhm233.top/?1" class="x-ns_">主站 | 可上传 | 张慧明</a>
+	              </li>
                   <li>
                     <a href="http://bs.zhm233.top/b/" class="x-ns_" aria-current="page">镜像 | 含曲包 | 网盘</a>
                   </li>
-                </ul>
-              </li>
-              <li class="x-nsw">
-                <a href="https://bsguide.moevio.club/" class="x-nsk">打分指南</a>
-              </li>
-              <!--li class="x-nsw">
-                <a href="#0" class="x-nsk">
-                  <span>创作教程</span>
-                  <svg class="x-nsx icon" aria-hidden="true" viewBox="0 0 12 12">
-                    <path d="M6,9l4-5H2Z"></path>
-                  </svg>
-                </a>
-                <ul class="x-nsz">
-                  <li>
-                    <a href="https://bsguide.moevio.club/model.html" class="x-ns_">模型教程</a>
-                  </li>
-                </ul>
-              </li-->
-              <li class="x-nsw">
-                <a href="#0" class="x-nsk">
-                  <span>服务器</span>
-                  <svg class="x-nsx icon" aria-hidden="true" viewBox="0 0 12 12">
-                    <path d="M6,9l4-5H2Z"></path>
-                  </svg>
-                </a>
-                <ul class="x-nsz">
-                  <li>
-                    <a href="https://bbbear-wgzeyu.gtxcn.com/" class="x-ns_">CN_河北联通-WGzeyu</a>
-                  </li>
-                  <li>
-                    <a href="http://bs.zhm233.top/zhm/" class="x-ns_">CN_河南电信-张慧明</a>
-                  </li>
-                  <li>
-                    <a href="http://bs.zhm233.top/4t8d/" class="x-ns_">CN_河北电信-四通八达</a>
-                  </li>
+	            </ul>
+	          </li>
+	          <li class="x-nsw">
+	            <a href="https://bsguide.moevio.club/" class="x-nsk">打分指南</a>
+	          </li>
+	          <li class="x-nsw">
+	            <a href="#0" class="x-nsk">
+	              <span>服务器</span>
+	              <svg class="x-nsx icon" aria-hidden="true" viewBox="0 0 12 12">
+	                <path d="M6,9l4-5H2Z"></path>
+	              </svg>
+	            </a>
+	            <ul class="x-nsz">
+	              <li>
+	                <a href="https://bbbear-wgzeyu.gtxcn.com/" class="x-ns_">CN_河北联通-WGzeyu</a>
+	              </li>
+	              <li>
+	                <a href="http://bs.zhm233.top/zhm/" class="x-ns_">CN_河南电信-张慧明</a>
+	              </li>
+	              <li>
+	                <a href="http://bs.zhm233.top/4t8d/" class="x-ns_">CN_河北电信-四通八达</a>
+	              </li>
                   <li>
                     <a href="http://bs.zhm233.top/emmm/" class="x-ns_">CN_江西电信-bowww</a>
                   </li>
-                </ul>
-              </li>
-            </ul>
+	            </ul>
+	          </li>
+	        </ul>
             <ul class="x-not flex-grow x-iv x-tur">
               <li class="x-nsw">
                 <a href="#0" class="x-nsk" aria-controls="qq-group">社区Q群</a>
@@ -129,8 +136,114 @@
         </div>
       </header>
     </div>
-    
-    <iframe id="iframea" frameborder="0" style="width:100%;" height="2560"></iframe>
+
+<div class="hzw" id="c_hzw"></div>
+
+<section id="cd-table">
+	<header class="cd-table-column">
+		<h2>站点</h2>
+		<ul style="white-space:nowrap">
+			<li>限速</li>
+			<li>位置</li>
+			<li>Mod / 模型等小文件</li>
+			<li>歌曲包 / 备份等大文件</li>
+			<li>批量 / 打包下载</li>
+			<li>上传 / 搜索文件</li>
+			<li>模型浏览图</li>
+			<li>推荐度</li>
+			<li>备注</li>
+			<li>链接</li>
+		</ul>
+	</header>
+
+	<div class="cd-table-container">
+		<div class="cd-table-wrapper">
+
+			<div class="cd-table-column" onclick="window.open('http://bs.zhm233.top/?1');">
+				<h2>张慧明的NAS</h2>
+				<ul>
+					<!--限速-->	<li>768KB/s</li>
+					<!--位置-->	<li>中国</li>
+					<!--小文件--><li class="cd-checked"><span>Yes</span></li>
+					<!--大包-->	<li class="cd-unchecked"><span>No</span></li>
+					<!--打包-->	<li class="cd-unchecked"><span>No</span></li>
+					<!--上传-->	<li class="cd-checked"><span>Yes</span></li>
+					<!--图片-->	<li class="cd-checked"><span>Yes</span></li>
+					<!--星级-->	<li>★★★★☆</li>
+					<!--备注-->	<li>切勿使用迅雷下载</li>
+					<li><a class="cd-select" href="http://bs.zhm233.top/?1" target="_blank">进入</a></li>
+				</ul>
+			</div> <!-- cd-table-column -->
+
+			<div class="cd-table-column" onclick="window.open('https://cloud.189.cn/t/BNN7J3RFZVZf');">
+				<h2>天翼云盘</h2>
+				<ul>
+					<!--限速-->	<li>2048KB/s+</li>
+					<!--位置-->	<li>中国</li>
+					<!--小文件--><li class="cd-checked"><span>Yes</span></li>
+					<!--大包-->	<li class="cd-checked"><span>Yes</span></li>
+					<!--打包-->	<li class="cd-checked"><span>Yes</span></li>
+					<!--上传-->	<li class="cd-unchecked"><span>No</span></li>
+					<!--图片-->	<li class="cd-unchecked"><span>No</span></li>
+					<!--星级-->	<li>★★★★★</li>
+					<!--备注-->	<li>登录即可高速下载</li>
+					<li><a class="cd-select" href="https://cloud.189.cn/t/BNN7J3RFZVZf" target="_blank">进入</a></li>
+				</ul>
+			</div> <!-- cd-table-column -->
+
+			<div class="cd-table-column" onclick="window.open('https://odobagg-my.sharepoint.com/:f:/g/personal/pmtgd0nvh_od_obagg_com/EhqH9OU4i_1MjLte2bby9WEBXxMy8fw5xDHcEToQOyB7kA?e=UWRb12');">
+				<h2>OneDrive</h2>
+				<ul>
+					<!--限速-->	<li>无 (看你国际网速)</li>
+					<!--位置-->	<li>美国</li>
+					<!--小文件--><li class="cd-checked"><span>Yes</span></li>
+					<!--大包-->	<li class="cd-checked"><span>Yes</span></li>
+					<!--打包-->	<li class="cd-checked"><span>Yes</span></li>
+					<!--上传-->	<li class="cd-unchecked"><span>No</span></li>
+					<!--图片-->	<li class="cd-unchecked"><span>No</span></li>
+					<!--星级-->	<li>★★★☆☆</li>
+					<!--备注-->	<li>访问量大时无法使用</li>
+					<li><a class="cd-select" href="https://odobagg-my.sharepoint.com/:f:/g/personal/pmtgd0nvh_od_obagg_com/EhqH9OU4i_1MjLte2bby9WEBXxMy8fw5xDHcEToQOyB7kA?e=UWRb12" target="_blank">进入</a></li>
+				</ul>
+			</div> <!-- cd-table-column -->
+
+			<div class="cd-table-column" onclick="window.open('https://bs-share.gtxcn.com/');">
+				<h2>WGzeyu的VPS</h2>
+				<ul>
+					<!--限速-->	<li>无 (看你国际网速)</li>
+					<!--位置-->	<li>日本</li>
+					<!--小文件--><li class="cd-checked"><span>Yes</span></li>
+					<!--大包-->	<li class="cd-checked"><span>Yes</span></li>
+					<!--打包-->	<li class="cd-unchecked"><span>No</span></li>
+					<!--上传-->	<li class="cd-unchecked"><span>No</span></li>
+					<!--图片-->	<li class="cd-unchecked"><span>No</span></li>
+					<!--星级-->	<li>★★☆☆☆</li>
+					<!--备注-->	<li>若网络不好容易失败</li>
+					<li><a class="cd-select" href="https://bs-share.gtxcn.com/" target="_blank">进入</a></li>
+				</ul>
+			</div> <!-- cd-table-column -->
+
+			<div class="cd-table-column" onclick="" aria-controls="baidupan">
+				<h2>百度网盘</h2>
+				<ul>
+					<!--限速-->	<li>128KB/s</li>
+					<!--位置-->	<li>中国</li>
+					<!--小文件--><li class="cd-checked"><span>Yes</span></li>
+					<!--大包-->	<li class="cd-checked"><span>Yes</span></li>
+					<!--打包-->	<li class="cd-checked"><span>Yes</span></li>
+					<!--上传-->	<li class="cd-unchecked"><span>No</span></li>
+					<!--图片-->	<li class="cd-unchecked"><span>No</span></li>
+					<!--星级-->	<li>★☆☆☆☆</li>
+					<!--备注-->	<li>大小包分为两个地址</li>
+					<li><a class="cd-select" href="#0">进入</a></li>
+				</ul>
+			</div> <!-- cd-table-column -->
+
+		</div> <!-- cd-table-wrapper -->
+	</div> <!-- cd-table-container -->
+
+	<em class="cd-scroll-right"></em>
+</section> <!-- cd-table -->
 
     <div class="x-nop x-nox flex x-ip x-pbg-d x-ribg-rs x-an js-modal" id="qq-group">
       <div class="x-nov x-pp x-s bg x-mc x-mm" role="alertdialog" tabindex="-1" aria-labelledby="modal-title-2" aria-describedby="modal-description-2">
@@ -172,19 +285,58 @@
         </div>
       </div>
     </div>
-    <script src="assets/header/js/util.js?v=71"></script>
-    <script src="assets/header/js/flexi-header.min.js?v=8"></script>
-    <script src="assets/header/js/modal-window.min.js?v=6"></script>
-    <script type="text/javascript">document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1278810113'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/stat.php%3Fid%3D1278810113' type='text/javascript'%3E%3C/script%3E"));</script>
+
+    <div class="x-nop x-nox flex x-ip x-pbg-d x-ribg-rs x-an js-modal" id="baidupan">
+      <div class="x-nov x-pp x-s bg x-mc x-mm" role="alertdialog" tabindex="-1" aria-labelledby="modal-title-2" aria-describedby="modal-description-2">
+        <header class="x-sbg-o x-lb x-la flex items-center justify-between">
+          <h4 class="x-cs" id="modal-title-2">百度网盘链接</h4>
+          <button class="reset x-nom x-noy js-modal__close js-tab-focus">
+            <svg class="icon" viewBox="0 0 20 20">
+              <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+                <line x1="3" y1="3" x2="17" y2="17"></line>
+                <line x1="17" y1="3" x2="3" y2="17"></line>
+              </g>
+            </svg>
+          </button>
+        </header>
+        <div class="x-lb x-la">
+          <div class="text-component">
+            <p id="modal-description-2">
+              <p>
+                小文件（如Mod、模型）保存在企业网盘：<a href="https://eyun.baidu.com/s/3kWffWEF/" target="_blank">点我进入</a><br>
+                注：不支持手机访问，可能需要转存才能下载。
+              </p>
+              <p>
+                大文件（歌曲包、备份）保存在个人网盘：<a href="https://pan.baidu.com/s/1BABoCir1YsByNLQKXtbolg" target="_blank">点我进入</a><br>
+                注：提取码为【1q2p】。
+              </p>
+              <p>
+                使用个人版网盘分享完整资源，分享后链接秒炸。<br>
+                而企业版容量又不够大，所以只好分为两个链接。
+              </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
-      function ciframe() {
-        var diva = document.getElementById("nheader");
-        document.getElementById("iframea").height = window.innerHeight - diva.offsetHeight;
+      function ctest() { /*被Iframe时隐藏导航栏*/
+	      if (window.frames.length != parent.frames.length && window.self != window.top) {
+			document.getElementById("c_nav").style.visibility="hidden";
+			document.getElementById("c_nav").innerHTML = "";
+			document.getElementById("c_hzw").style.height="0";
+	      }
       }
-      function cimg(imgid,imgurl){
-        document.getElementById(imgid).src = imgurl;
-      }
-      window.onresize = ciframe;
     </script>
-  </body>
+
+<script src="https://cdn.staticfile.org/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Gem jQuery -->
+
+<script src="../assets/header/js/util.js?v=71"></script>
+<script src="../assets/header/js/flexi-header.min.js?v=8"></script>
+<script src="../assets/header/js/modal-window.min.js?v=6"></script>
+
+<script type="text/javascript">document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1278810113'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/stat.php%3Fid%3D1278810113' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
 </html>
