@@ -191,17 +191,18 @@ Main components
 #cd-table .cd-scroll-right {
   /* small right arrow that indicates it's possible to scroll right */
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 48px;
+  height: 32px;
   position: absolute;
   right: 0;
   top: 50%;
-  margin-top: -8px;
+  margin-top: -16px;
   background: url("../img/small-arrow.svg") no-repeat center center;
+  background-size: 32px 32px;
   z-index: 6;
-  -webkit-animation: cd-scroll-right 1.5s infinite;
-  -moz-animation: cd-scroll-right 1.5s infinite;
-  animation: cd-scroll-right 1.5s infinite;
+  -webkit-animation: cd-scroll-right 1s infinite;
+  -moz-animation: cd-scroll-right 1s infinite;
+  animation: cd-scroll-right 1s infinite;
 }
 @media only screen and (min-width: 870px) {
   #cd-table {
@@ -245,7 +246,7 @@ Main components
   }
 
   50% {
-    -webkit-transform: translateX(3px);
+    -webkit-transform: translateX(5px);
   }
 }
 @-moz-keyframes cd-scroll-right {
@@ -254,7 +255,7 @@ Main components
   }
 
   50% {
-    -moz-transform: translateX(3px);
+    -moz-transform: translateX(5px);
   }
 }
 @keyframes cd-scroll-right {
@@ -267,10 +268,10 @@ Main components
   }
 
   50% {
-    -webkit-transform: translateX(3px);
-    -moz-transform: translateX(3px);
-    -ms-transform: translateX(3px);
-    -o-transform: translateX(3px);
-    transform: translateX(3px);
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
+    transform: translateX(5px);
   }
 }
