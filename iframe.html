@@ -10,8 +10,18 @@
 		<script>
 			function cload(){
 				setTimeout(function(){
-					document.getElementById("loadfailed").innerHTML="若网页无法加载，请从 ↑ 顶部导航栏进入网盘镜像";
+					cshow();
 				}, 2000); 
+			}
+			function cshow(){
+				if(window.innerWidth < 1024)
+				{
+					document.getElementById("loadfailed").innerHTML="若网页无法加载，请从 ↗ 右上导航栏进入网盘镜像";
+				}
+				else
+				{
+					document.getElementById("loadfailed").innerHTML="若网页无法加载，请从 ↑ 顶部导航栏进入网盘镜像";
+				}
 			}
 		</script>
 		<!--script language='javascript'>document.location = 'http://zhm233.top:98/?share/folder&user=1&sid=xTwBadYE'</script-->
