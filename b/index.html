@@ -174,24 +174,10 @@
 				</ul>
 			</div> <!-- cd-table-column -->
 
-			<div class="cd-table-column" onclick="window.open('http://bs.zhm233.top/?1');">
-				<h2>张慧明的NAS</h2>
-				<ul>
-					<!--速度-->	<li>0.75MB/s</li>
-					<!--位置-->	<li>中国</li>
-					<!--小文件--><li class="cd-checked"><span>Yes</span></li>
-					<!--大包-->	<li class="cd-unchecked"><span>No</span></li>
-					<!--打包-->	<li class="cd-unchecked"><span>No</span></li>
-					<!--搜索-->	<li class="cd-checked"><span>Yes</span></li>
-					<!--备注-->	<li>不含曲包等大文件</li>
-					<li><a class="cd-select" aria-controls="zhangnas" href="http://bs.zhm233.top/?1" target="_blank">进入</a></li>
-				</ul>
-			</div> <!-- cd-table-column -->
-
 			<div class="cd-table-column" onclick="window.open('https://bai001-my.sharepoint.com/:f:/g/personal/gopeet_rh_xishu_xyz/Euv8NEg9TvZNhjUO1x-qRg4B3vqcpUzJJY2JzJvZsOMdXQ?e=Pz9mNf');">
 				<h2>OneDrive</h2>
 				<ul>
-					<!--速度-->	<li>0.1~10MB/s</li>
+					<!--速度-->	<li>0.1~20MB/s</li>
 					<!--位置-->	<li>美国</li>
 					<!--小文件--><li class="cd-checked"><span>Yes</span></li>
 					<!--大包-->	<li class="cd-checked"><span>Yes</span></li>
@@ -202,16 +188,30 @@
 				</ul>
 			</div> <!-- cd-table-column -->
 
+      <div class="cd-table-column" onclick="window.open('http://bs.zhm233.top/?1');">
+        <h2>张慧明的NAS</h2>
+        <ul>
+          <!--速度--> <li>0.75MB/s</li>
+          <!--位置--> <li>中国</li>
+          <!--小文件--><li class="cd-checked"><span>Yes</span></li>
+          <!--大包--> <li class="cd-unchecked"><span>No</span></li>
+          <!--打包--> <li class="cd-unchecked"><span>No</span></li>
+          <!--搜索--> <li class="cd-checked"><span>Yes</span></li>
+          <!--备注--> <li>不含曲包等大文件</li>
+          <li><a class="cd-select" aria-controls="zhangnas" href="http://bs.zhm233.top/?1" target="_blank">进入</a></li>
+        </ul>
+      </div> <!-- cd-table-column -->
+
 			<div class="cd-table-column" onclick="window.open('https://bs-share.gtxcn.com/');">
 				<h2>WGzeyu的VPS</h2>
 				<ul>
-					<!--限速-->	<li>0.1~50MB/s</li>
-					<!--位置-->	<li>日本</li>
+          <!--速度--> <li>0.75MB/s</li>
+          <!--位置--> <li>中国</li>
 					<!--小文件--><li class="cd-checked"><span>Yes</span></li>
 					<!--大包-->	<li class="cd-checked"><span>Yes</span></li>
 					<!--打包-->	<li class="cd-unchecked"><span>No</span></li>
 					<!--搜索-->	<li class="cd-unchecked"><span>No</span></li>
-					<!--备注-->	<li>网好极快网差极慢</li>
+					<!--备注-->	<li>同时下载最多三个</li>
 					<li><a class="cd-select" aria-controls="wangvps" href="https://bs-share.gtxcn.com/" target="_blank">进入</a></li>
 				</ul>
 			</div> <!-- cd-table-column -->
@@ -351,6 +351,40 @@
       </div>
     </div>
 
+    <div class="x-nop x-nox flex x-ip x-pbg-d x-ribg-rs x-an js-modal" id="wangvps">
+      <div class="x-nov x-pp x-s bg x-mc x-mm" role="alertdialog" tabindex="-1" aria-labelledby="modal-title-2" aria-describedby="modal-description-2" style="background:#FFF;">
+        <header class="x-sbg-o x-lb x-la flex items-center justify-between">
+          <h4 class="x-cs" id="modal-title-2">WGzeyu的VPS</h4>
+          <button class="reset x-nom x-noy js-modal__close js-tab-focus">
+            <svg class="icon" viewBox="0 0 20 20">
+              <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+                <line x1="3" y1="3" x2="17" y2="17"></line>
+                <line x1="17" y1="3" x2="3" y2="17"></line>
+              </g>
+            </svg>
+          </button>
+        </header>
+        <div class="x-lb x-la">
+          <div class="text-component">
+            <p id="modal-description-2">
+              <p>
+                请使用浏览器下载，最多同时下载三个，别用迅雷等软件。
+              </p>
+              <p>
+                由于不支持断点续传，若网络发生错误则会直接中断下载。<br>
+                大文件优先推荐使用其他镜像站下载，本站仅作为备份运行
+              </p>
+              <p>
+                如果还没有打开页面，请复制链接手动打开：<br>
+                https://bs-share.gtxcn.com/<br>
+                若链接失效请在右上角加群反馈并@WGzeyu
+              </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="x-nop x-nox flex x-ip x-pbg-d x-ribg-rs x-an js-modal" id="onedrivedl">
       <div class="x-nov x-pp x-s bg x-mc x-mm" role="alertdialog" tabindex="-1" aria-labelledby="modal-title-2" aria-describedby="modal-description-2" style="background:#FFF;">
         <header class="x-sbg-o x-lb x-la flex items-center justify-between">
@@ -382,44 +416,6 @@
               <p>
                 如果还没有打开页面，请复制链接手动打开：<br>
                 https://bai001-my.sharepoint.com/:f:/g/personal/gopeet_rh_xishu_xyz/Euv8NEg9TvZNhjUO1x-qRg4B3vqcpUzJJY2JzJvZsOMdXQ?e=Pz9mNf<br>
-                若链接失效请在右上角加群反馈并@WGzeyu
-              </p>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="x-nop x-nox flex x-ip x-pbg-d x-ribg-rs x-an js-modal" id="wangvps">
-      <div class="x-nov x-pp x-s bg x-mc x-mm" role="alertdialog" tabindex="-1" aria-labelledby="modal-title-2" aria-describedby="modal-description-2" style="background:#FFF;">
-        <header class="x-sbg-o x-lb x-la flex items-center justify-between">
-          <h4 class="x-cs" id="modal-title-2">WGzeyu的VPS</h4>
-          <button class="reset x-nom x-noy js-modal__close js-tab-focus">
-            <svg class="icon" viewBox="0 0 20 20">
-              <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
-                <line x1="3" y1="3" x2="17" y2="17"></line>
-                <line x1="17" y1="3" x2="3" y2="17"></line>
-              </g>
-            </svg>
-          </button>
-        </header>
-        <div class="x-lb x-la">
-          <div class="text-component">
-            <p id="modal-description-2">
-              <p>
-                请使用浏览器下载，速度取决于你的国际网速，别用迅雷。
-              </p>
-              <p>
-                中国连接其他国家的网速日常不够用，目前只有中国这样，<br>
-                其中联通的拥塞不算太严重，电信也还凑合，就移动最差。
-              </p>
-              <p>
-                此地址相对来说线路好些，国内联通闲时下载速度40MB/s+<br>
-                <img src="img/wangvps.png">
-              </p>
-              <p>
-                如果还没有打开页面，请复制链接手动打开：<br>
-                https://bs-share.gtxcn.com/<br>
                 若链接失效请在右上角加群反馈并@WGzeyu
               </p>
             </p>
