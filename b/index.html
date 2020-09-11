@@ -463,7 +463,7 @@
 
     <script>
       function ctest() { /*被Iframe时隐藏导航栏*/
-	      if (window.frames.length != parent.frames.length && window.self != window.top) {
+	      if (window.frames.length != parent.frames.length || window.self != window.top) {
 			document.getElementById("c_nav").style.visibility="hidden";
 			document.getElementById("c_nav").innerHTML = "";
 			document.getElementById("c_hzw").style.height="0";
