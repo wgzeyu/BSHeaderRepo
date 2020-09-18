@@ -5,7 +5,7 @@
         <title>正在加载...</title>
         <meta http-equiv="refresh" content="0;url=http://zhm233.top:98/?share/folder&user=1&sid=xTwBadYE">
     </head>
-    <body onload="cload();">
+    <body>
     	<h1 style="text-align: center;" id="loadfailed"></h1>
 		<script>
 			function cload(){
@@ -22,6 +22,18 @@
 				{
 					document.getElementById("loadfailed").innerHTML="若网页无法加载，请从 ↖ 顶部导航栏进入网盘镜像";
 				}
+			}
+			window.onload = function() {
+			  if (document.referrer.slice(0,21) != "http://bs.zhm233.top/")
+			  {
+			    console.log("触发统计", document.referrer.slice(0,21));
+			    var cz = document.createElement("script");
+			    cz.src = "https://s23.cnzz.com/z_stat.php?id=1275236738&web_id=1275236738";
+			    document.getElementsByTagName('body')[0].appendChild(cz);
+			  } else {
+			    console.log("不统计", document.referrer.slice(0,21));
+			  }
+			  cload();
 			}
 		</script>
 		<!--script language='javascript'>document.location = 'http://zhm233.top:98/?share/folder&user=1&sid=xTwBadYE'</script-->
